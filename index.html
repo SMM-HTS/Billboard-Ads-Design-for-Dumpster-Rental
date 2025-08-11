@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammoth Dumpster - Premium Roll-Off Dumpster Rentals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', Arial, sans-serif
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+        body {
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.7
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff8c00;
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3)
+        }
+
+        .btn:hover {
+            background: #e67e00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+            color: #000
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+            color: #222;
+            display: flex;
+            align-items: center
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px
+        }
+
+        .logo span {
+            color: #ff8c00
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+            position: relative
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff8c00;
+            transition: width 0.3s ease
+        }
+
+        .nav-links a:hover:after {
+            width: 100%
+        }
+
+        .nav-links a:hover {
+            color: #ff8c00
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding-top: 80px
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3)
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.2s ease;
+            opacity: 0.9
+        }
+
+        .hero .btn {
+            animation: fadeInUp 1.4s ease
+        }
+
+        .section {
+            padding: 100px 0
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 42px;
+            position: relative;
+            font-weight: 700
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #ff8c00;
+            border-radius: 2px
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 18px;
+            color: #666
+        }
+
+        .dumpster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px
+        }
+
+        .dumpster-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+            position: relative
+        }
+
+        .dumpster-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15)
+        }
+
+        .dumpster-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #ff8c00
+        }
+
+        .dumpster-img {
+            height: 220px;
+            overflow: hidden
+        }
+
+        .dumpster-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease
+        }
+
+        .dumpster-card:hover .dumpster-img img {
+            transform: scale(1.1)
+        }
+
+        .dumpster-content {
+            padding: 25px
+        }
+
+        .dumpster-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700
+        }
+
+        .dumpster-content p {
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 15px
+        }
+
+        .price {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ff8c00;
+            margin-bottom: 20px
+        }
+
+        .price span {
+            font-size: 16px;
+            font-weight: 600;
+            color: #999
+        }
+
+        .features {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+            position: relative;
+            overflow: hidden
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1)
+        }
+
+        .feature-card:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #ff8c00
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            color: #ff8c00;
+            margin-bottom: 25px;
+            transition: all 0.4s ease
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1)
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 15px
+        }
+
+        .testimonials {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1581093450021-4a7360e9a7e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+            position: relative
+        }
+
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 140, 0, 0.1);
+            pointer-events: none
+        }
+
+        .testimonials .section-title {
+            color: #fff
+        }
+
+        .testimonials .section-title:after {
+            background: #fff
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2)
+        }
+
+        .testimonial-card:before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(255, 255, 255, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 16px;
+            position: relative;
+            z-index: 1
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 18px;
+            color: #ff8c00
+        }
+
+        .testimonial-role {
+            display: block;
+            font-size: 14px;
+            color: #bbb;
+            margin-top: 5px
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #ff8c00 0%, #ff6b00 100%);
+            color: #000;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%
+        }
+
+        .cta:after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            font-weight: 800
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 18px
+        }
+
+        .cta .btn {
+            background: #000;
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2)
+        }
+
+        .cta .btn:hover {
+            background: #222;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3)
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 80px 0 30px
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #ff8c00;
+            border-radius: 3px
+        }
+
+        .footer-links {
+            list-style: none
+        }
+
+        .footer-links li {
+            margin-bottom: 12px
+        }
+
+        .footer-links a {
+            color: #bbb;
+            transition: all 0.3s ease;
+            display: inline-block
+        }
+
+        .footer-links a:hover {
+            color: #ff8c00;
+            transform: translateX(5px)
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #bbb;
+            display: flex;
+            align-items: flex-start
+        }
+
+        .contact-info i {
+            margin-right: 12px;
+            color: #ff8c00;
+            margin-top: 3px
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 18px
+        }
+
+        .social-links a:hover {
+            background: #ff8c00;
+            color: #000;
+            transform: translateY(-5px)
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+            color: #999;
+            font-size: 14px
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px)
+            }
+
+            50% {
+                transform: translateY(-15px)
+            }
+
+            100% {
+                transform: translateY(0px)
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.05)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0)
+            }
+
+            40% {
+                transform: translateY(-20px)
+            }
+
+            60% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s
+        }
+
+        @media (max-width:992px) {
+            .hero h1 {
+                font-size: 42px
+            }
+
+            .section-title {
+                font-size: 36px
+            }
+        }
+
+        @media (max-width:768px) {
+            .header-container {
+                flex-direction: column
+            }
+
+            .nav-links {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center
+            }
+
+            .nav-links li {
+                margin: 10px
+            }
+
+            .hero h1 {
+                font-size: 36px
+            }
+
+            .hero p {
+                font-size: 18px
+            }
+
+            .section {
+                padding: 70px 0
+            }
+
+            .section-title {
+                font-size: 32px
+            }
+
+            .dumpster-grid {
+                grid-template-columns: 1fr
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media (max-width:576px) {
+            .hero h1 {
+                font-size: 28px
+            }
+
+            .hero {
+                padding-top: 120px
+            }
+
+            .section-title {
+                font-size: 28px
+            }
+
+            .cta h2 {
+                font-size: 32px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="logo.jpg"
+                    alt="Mammoth Dumpster Logo">
+            
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Dumpsters</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="btn">BOOK NOW</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Pelham's Premium Dumpster Rental Service</h1>
+            <p>Reliable, affordable roll-off dumpster rentals for residential and commercial projects of all sizes</p>
+            <a href="#" class="btn pulse">GET YOUR DUMPSTER TODAY</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Dumpster Sizes</h2>
+            <p class="section-subtitle">Perfect solutions for any project, from small cleanouts to large construction
+                jobs</p>
+            <div class="dumpster-grid">
+                <div class="dumpster-card">
+                    <div class="dumpster-img">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="10 Yard Dumpster">
+                    </div>
+                    <div class="dumpster-content">
+                        <h3>10 Yard Roll-Off</h3>
+                        <div class="price">$439 <span>+ $10 per additional 100 lbs</span></div>
+                        <p>Ideal for small remodeling projects, garage cleanouts, or basement cleanings</p>
+                        <p><i class="fas fa-ruler-combined"></i> 14' L x 8' W x 5' H</p>
+                        <p><i class="fas fa-calendar-alt"></i> 3 Day Rental Included</p>
+                        <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                </div>
+                <div class="dumpster-card">
+                    <div class="dumpster-img">
+                        <img src="https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="20 Yard Dumpster">
+                    </div>
+                    <div class="dumpster-content">
+                        <h3>20 Yard Roll-Off</h3>
+                        <div class="price">$439 <span>+ $10 per additional 100 lbs</span></div>
+                        <p>Perfect for kitchen remodels, roofing projects, or large cleanouts</p>
+                        <p><i class="fas fa-ruler-combined"></i> 14' L x 8' W x 5' H</p>
+                        <p><i class="fas fa-calendar-alt"></i> 3 Day Rental Included</p>
+                        <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                </div>
+                <div class="dumpster-card">
+                    <div class="dumpster-img">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="30 Yard Dumpster">
+                    </div>
+                    <div class="dumpster-content">
+                        <h3>30 Yard Roll-Off</h3>
+                        <div class="price">$515 <span>+ $10 per additional 100 lbs</span></div>
+                        <p>Great for new construction, major renovations, or large demolition projects</p>
+                        <p><i class="fas fa-ruler-combined"></i> 18' L x 8' W x 6' H</p>
+                        <p><i class="fas fa-calendar-alt"></i> 3 Day Rental Included</p>
+                        <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                </div>
+                <div class="dumpster-card">
+                    <div class="dumpster-img">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="40 Yard Dumpster">
+                    </div>
+                    <div class="dumpster-content">
+                        <h3>40 Yard Roll-Off</h3>
+                        <div class="price">$515 <span>+ $10 per additional 100 lbs</span></div>
+                        <p>Best for major construction projects, commercial jobs, or whole-house cleanouts</p>
+                        <p><i class="fas fa-ruler-combined"></i> 22' L x 8' W x 8' H</p>
+                        <p><i class="fas fa-calendar-alt"></i> 3 Day Rental Included</p>
+                        <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Mammoth Dumpster</h2>
+            <p class="section-subtitle">We make dumpster rental simple, affordable, and hassle-free</p>
+            <div class="feature-grid">
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Reliable Service</h3>
+                    <p>On-time delivery and pickup with professional drivers who care about your property</p>
+                </div>
+                <div class="feature-card floating delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Affordable Rates</h3>
+                    <p>Competitive pricing with no hidden fees - you only pay for what you need</p>
+                </div>
+                <div class="feature-card floating delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Rentals</h3>
+                    <p>Custom rental periods to match your project timeline without rushing</p>
+                </div>
+                <div class="feature-card floating delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local Experts</h3>
+                    <p>Pelham-based company that understands local needs and regulations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Testimonials</h2>
+            <p class="section-subtitle">Hear what our satisfied customers say about our service</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I used Mammoth Dumpster for a major home renovation project. Their
+                        40-yard container was perfect for all our debris. The driver placed it exactly where we needed
+                        and picked it up right on schedule. Pricing was transparent with no surprises."</p>
+                    <p class="testimonial-author">Sarah Johnson</p>
+                    <p class="testimonial-role">Homeowner, Pelham</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a contractor, I rely on Mammoth Dumpster for all my job sites. Their
+                        containers are always clean, their pricing is fair, and their customer service is excellent.
+                        They've never let me down on a tight construction schedule."</p>
+                    <p class="testimonial-author">Mike Rodriguez</p>
+                    <p class="testimonial-role">General Contractor</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"We needed a dumpster for a community clean-up event. Mammoth worked
+                        with us on pricing and even donated an extra day. The whole process was smooth from booking to
+                        pickup. Highly recommend for any residential needs."</p>
+                    <p class="testimonial-author">Emily Chen</p>
+                    <p class="testimonial-role">HOA President</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container">
+            <h2>Ready to Tackle Your Project?</h2>
+            <p>Join hundreds of satisfied customers who trust Mammoth Dumpster for their waste management needs. Get
+                your free quote today!</p>
+            <a href="#" class="btn bounce">GET INSTANT QUOTE</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 1401 Mammoth Road, Pelham, NH 03076</p>
+                        <p><i class="fas fa-phone-alt"></i> 603-880-8000 (Call/Text)</p>
+                        <p><i class="fas fa-envelope"></i> sales@mammothdumpster.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 7AM-7PM</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Dumpster Sizes</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Dumpsters</a></li>
+                        <li><a href="#">Commercial Dumpsters</a></li>
+                        <li><a href="#">Construction Debris</a></li>
+                        <li><a href="#">Roofing Disposal</a></li>
+                        <li><a href="#">Estate Cleanouts</a></li>
+                        <li><a href="#">Yard Waste Removal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Service Areas</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Pelham</a></li>
+                        <li><a href="#">Salem</a></li>
+                        <li><a href="#">Windham</a></li>
+                        <li><a href="#">Hudson</a></li>
+                        <li><a href="#">Nashua</a></li>
+                        <li><a href="#">Southern NH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mammoth Dumpster. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a
+                        href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                link.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            const dumpsterCards = document.querySelectorAll('.dumpster-card');
+            dumpsterCards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+                card.addEventListener('mouseenter', function () {
+                    this.querySelector('.btn').classList.add('pulse');
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.querySelector('.btn').classList.remove('pulse');
+                });
+            });
+
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255,255,255,0.98)';
+                    header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.15)';
+                } else {
+                    header.style.background = 'rgba(255,255,255,0.95)';
+                    header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.1)';
+                }
+            });
+
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.feature-card, .testimonial-card, .section-title, .section-subtitle');
+                elements.forEach(el => {
+                    const elementPosition = el.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    if (elementPosition < screenPosition) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            window.addEventListener('load', animateOnScroll);
+
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.165,0.84,0.44,1))';
+            });
+
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            testimonialCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.165,0.84,0.44,1))';
+            });
+
+            const sectionTitles = document.querySelectorAll('.section-title, .section-subtitle');
+            sectionTitles.forEach(title => {
+                title.style.opacity = '0';
+                title.style.transform = 'translateY(30px)';
+                title.style.transition = 'all 0.6s cubic-bezier(0.165,0.84,0.44,1))';
+            });
+
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-3px) scale(1.03))';
+                });
+                btn.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0) scale(1))';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
